@@ -35,6 +35,7 @@
         android:id="@+id/iv_start"
         android:layout_width="170dp"
         android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/ic_start"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,10 +43,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="310dp"
+        android:layout_height="260dp"
         android:src="@drawable/bg_person2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.sunjoolee.sparta_week1_mbti
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,7 +26,9 @@ class TestActivity : AppCompatActivity() {
         //마지막 페이지인 경우: 결과 페이지로 이동
         val currentItem = viewPager.currentItem
         if(currentItem == 3){
-            //TODO: 결과 페이지로 이동
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("results", questionResult.results.toIntArray())
+            startActivity(intent)
         }
         else viewPager.currentItem = currentItem+1
     }

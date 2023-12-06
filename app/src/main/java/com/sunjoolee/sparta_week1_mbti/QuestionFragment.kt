@@ -105,6 +105,11 @@ class QuestionFragment : Fragment() {
             questionAnswerRadioButton1.text = getString(questionAnswers[questionType][i*2])
             questionAnswerRadioButton2.text = getString(questionAnswers[questionType][i*2 + 1])
         }
+
+        val nextButton = view.findViewById<Button>(R.id.btn_next)
+        //마지막 질문지 인 경우:
+        if(questionType == 3) nextButton.text = "결과 보기"
+        else nextButton.text = "다음으로"
         return view
     }
 
